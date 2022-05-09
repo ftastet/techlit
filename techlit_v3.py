@@ -22,8 +22,6 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 
-from st_aggrid import AgGrid
-
 #####################################################################################################################################
 #####################################################################################################################################
 
@@ -32,11 +30,11 @@ from st_aggrid import AgGrid
 #####################################################################################################################################
 #####################################################################################################################################
 
-itv = pd.read_csv('./Dataset/itv_cleaned_abaques.csv', index_col = 0)
+itv = pd.read_csv('itv_cleaned_abaques.csv', index_col = 0)
 
-ae_all = pd.read_csv('./Dataset/ae_all_abaques_cleaned.csv', index_col = 0)
-ae_tech = pd.read_csv('./Dataset/ae_tech_abaques_cleaned.csv', index_col = 0)
-ae_cr = pd.read_csv('./Dataset/ae_cr_abaques_cleaned.csv', index_col = 0)
+ae_all = pd.read_csv('ae_all_abaques_cleaned.csv', index_col = 0)
+ae_tech = pd.read_csv('ae_tech_abaques_cleaned.csv', index_col = 0)
+ae_cr = pd.read_csv('ae_cr_abaques_cleaned.csv', index_col = 0)
 
 #####################################################################################################################################
 #####################################################################################################################################
@@ -46,7 +44,7 @@ ae_cr = pd.read_csv('./Dataset/ae_cr_abaques_cleaned.csv', index_col = 0)
 #####################################################################################################################################
 #####################################################################################################################################
 
-st.sidebar.image('./Img/alten.png', use_column_width=False, width = 60)
+st.sidebar.image('alten.png', use_column_width=False, width = 60)
 
 st.sidebar.title("TECHLIT")
 
@@ -63,7 +61,7 @@ page = st.sidebar.radio("Sommaire", pages)
 
 if page == pages[0]:   
 
-    st.image('./Img/tisseo.png', use_column_width=False, width = 200)
+    st.image('tisseo.png', use_column_width=False, width = 200)
     st.text('')
     
     st.header("OBJECTIFS DE TECHLIT")
